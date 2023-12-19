@@ -1,17 +1,109 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
- <meta charset="UTF-8"> 
- <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <title>Document</title> 
-</head> 
-<body> 
-    <h1> This is heading 1</h1>
-    <h2> This is heading 2 </h2>
-    <h3> This is heading 3 </h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
-    <h1> This is a Heading Arwen Catubig</h1>
- <p>This is a paragraph.</p> 
-</body> 
-</html> 
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #6c5391;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover {
+  background-color: #8872a0;
+  color: black;
+}
+
+
+.content {
+  background-color: #ceedf8;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  background-color: #aa9bd5;
+  padding: 50px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 0 auto;
+  font-size: 30px;
+  height: 400px; 
+  margin: 0 auto; 
+}
+
+
+.grid-container > .div2 {
+  width: 700px; 
+}
+
+.grid-container > .div2 img {
+  max-width: 100%;
+  height: 400px; 
+  object-fit: cover; 
+}
+
+
+.grid-container > div img {
+  margin: 0;
+  vertical-align: top;
+  height: 100%;
+  width: 110%
+}
+
+
+.footer {
+  background-color: #ceedf8;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#">HOME</a>
+  <a href="#">INTERESTS</a>
+  <a href="#">GALLERY</a>
+</div>
+
+<div class="content">
+  <h1> GALLERY </h1>
+</div>
+<div class="grid-container">
+  <div><img src="images/hiyori1.jpg" alt="HIYORI"></div>
+  <div class="div2"><img src="images/hiyori2.jpg" alt="HIYORI"></div>
+  <div><img src="images/hiyori3.jpg" alt="HIYORI"></div>
+</div>
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
