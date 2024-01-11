@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>INTERESTS</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top: 93px;
+      background-color: #ffe1e1; /* Adjusted background color */
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #ffc3c3;
+      text-align: center; 
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .topnav a {
+      display: inline-block;
+      padding: 1px; 
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 10%;
+    }
+
+    .topnav a img {
+      width: 70px; 
+      height: auto;
+    }
+
+    .topnav a:hover {
+      background-color: #c9dff4;
+    }
+
+    .content {
+      background-color: #ffd8d8;
+      padding: 20px;
+      text-align: center;
+      font-family: superc;
+      font-size:20px;
+      color:#e38787;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+      background-color: #ffe1e1;
+      padding: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .grid-item {
+      background-color: #ffd2d2;
+      text-align: center;
+      padding: 25px;
+      font-size: 18px;
+      height: 400px;
+      margin: 20px;
+      margin-bottom: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10%;
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      height: 70%;
+      object-fit: cover; 
+      border-radius: 10%;
+    }
+
+    .grid2-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: auto;
+      background-color: #ffe1e1;
+     
+      padding: 25px;
+     
+    }
+
+    .grid2-item {
+      background-color: #ffd2d2;
+      text-align: center;
+      padding: 25px;
+      font-size: 18px;
+      height: 400px;
+      margin: 20px;
+      margin-bottom: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10%;
+    }
+
+    .grid2-item img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover; 
+      border-radius: 10%;
+    }
+
+    .song-title {
+      font-family: superc;
+      font-size: 20px;
+      color: #e38787;
+      margin-top: 10px;
+    }
+
+    .music-player {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .transparent-gif {
+      width: 400px;
+      height: auto;
+      text-align: center;
+      margin-left: 560px;
+      margin-top: 0px;
+    }
+
+    .footer {
+      background-color: #ffd8d8;
+      padding: 10px;
+      margin-top: 30px;
+    }
+
+    .starline {
+        width: 300px;
+      height: 10x;
+      text-align: center;
+      margin-left: 610px;
+      margin-top: 0px;
+
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="home.html"><img src="images/milkf.png" alt="Home"></a>
+    <a href="aboutme.html"><img src="images/chiffonf.png" alt="About Me"></a>
+    <a href="index.html"><img src="images/heartcinna.png" alt="About Me"></a>
+    <a href="interests.html"><img src="images/mochaf.png" alt="Interests"></a>
+    <a href="gallery.html"><img src="images/expressof.png" alt="Gallery"></a>
+  </div>
+
+  <div class="content">
+    <h1> I  N  T  E  R  E  S  T  S </h1>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="images/timeless.jpg" alt="HIYORI">
+      <p class="song-title">Timeless</p>
+      <audio class="music-player" controls>
+        <source src="songs/timeless.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="grid-item">
+      <img src="images/middle.jpg" alt="HIYORI">
+      <p class="song-title">"I'll Crawl Home To Her"</p>
+      <audio class="music-player" controls>
+        <source src="songs/worksong.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="grid-item">
+      <img src="images/adore.jpg" alt="HIYORI">
+      <p class="song-title">Everyone Adores You</p>
+      <audio class="music-player" controls>
+        <source src="songs/adore.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+  </div>
+
+  <img class="transparent-gif" src="images/top3songs.gif" alt="Transparent GIF">
+  <img class="starline" src="images/starline.png" alt="Starkline">
+  
+
+  <div class="grid2-container">
+    
+    <div class="grid2-item">
+      <img src="images/fashion.jpg" alt="fashion">
+      <p class="song-title">fashion</p>
+     
+    </div>
+
+    <div class="grid2-item">
+      <img src="images/vg.jpg" alt="videogames">
+      <p class="song-title">videogames</p>
+      
+    </div>
+
+    <div class="grid2-item">
+      <img src="images/read.jpg" alt="books">
+      <p class="song-title">books</p>
+     
+    </div>
+
+    <div class="grid2-item">
+        <img src="images/art.jpg" alt="art">
+        <p class="song-title">art</p>
+        
+      </div>
+
+  </div>
+
+  <img class="transparent-gif" src="images/hobbies.gif" alt="Transparent GIF">
+  <img class="starline" src="images/starline.png" alt="Starkline">
+
+  <div class="footer">
+    <p>I LIKE</p>
+  </div>
+
+</body>
+</html>
