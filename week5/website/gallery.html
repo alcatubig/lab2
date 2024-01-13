@@ -42,6 +42,11 @@
             margin: 0;
             padding-top: 93px;
             background-color: #fefce5;
+          background-image: url(images/yel1.jpg);
+        
+  background-position: center;
+  
+          
         }
 
     
@@ -55,6 +60,8 @@
             padding: 20px;
             background-color: #dbf2ff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
 
         .post {
@@ -65,7 +72,7 @@
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align to the start (left) of the container */
+    align-items: flex-start;
 }
 
     .post:hover {
@@ -101,17 +108,23 @@
       font-family: superc;
       font-size:20px;
       color: #d09b86;
+      
+    
     }
 
     .footer {
       background-color: #fff4d6;
       padding: 10px;
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+      
     }
 
     .profile-info {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Align to the start (left) of the container */
+    justify-content: flex-start; 
     margin-bottom: 0px;
     }
 
@@ -133,6 +146,9 @@
         font-size: 80%;
         font-weight: lighter;
     }
+
+
+   
 
   </style>
 </head>
@@ -247,8 +263,10 @@
 </main>
 
   <div class="footer">
-    <p>GALLERY SLASH NEWS FEED BUT IT'S JUST ME BEING MESSY</p>
+    <p> GALLERY SLASH NEWS FEED BUT IT'S JUST ME BEING MESSY </p> <div class="digital-clock" id="digital-clock">  </div> 
   </div>
+  
+  <script src="jav.js"></script>
 
 </body>
 </html>

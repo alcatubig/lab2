@@ -18,3 +18,15 @@
     src: url(fonts/SuperCereal-owLDo.ttf);
 }
 
+
+
+.digital-clock {
+    font-family: superc;
+    font-size: 20px;
+    color: #333;
+    text-align: right;
+    position: relative;
+    margin-right: 10px;
+    display: flex;;
+
+}

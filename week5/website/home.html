@@ -80,13 +80,16 @@
       max-width: 100%;
       height: auto;
       object-fit: cover; 
-      border: 10px solid #ffcad3; /* Cute border color */
-      border-radius: 15px; /* Cute border radius */
+      border: 10px solid #ffcad3; 
+      border-radius: 15px; 
     }
 
     .footer {
       background-color: #d1e5f4;
       padding: 10px;
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
     }
   </style>
 </head>
@@ -115,7 +118,10 @@
 
   <div class="footer">
     <p>josh hutcherson'd</p>
+    <div class="digital-clock" id="digital-clock">  </div> 
   </div>
+  
+  <script src="jav.js"></script>
 
 </body>
 </html>
