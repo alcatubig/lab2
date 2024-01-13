@@ -64,12 +64,60 @@
   p {
     font-family: superc;
   }
+
+  #cuteMessage {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
   </style>
 </head>
 <body>
   
+  <div id="cuteMessage"></div>
+
+  <script>
+    
+    const cuteMessages = [
+      "let's fly like fluffy clouds~",
+      "my tail is pretty, right?",
+      "you're the sprinkles on my cupcake!",
+      "you're as sweet as honey!",
+      "you light up my day like stars in the night sky!",
+      "make each day your masterpiece.",
+      "hi po tagal niyo naman dito",
+      "shoo na",
+      "wala na ba tao? hehe",
+      "...",
+      "i love you bubby mwamwa",
+    ];
+
+    let currentIndex = 0;
 
   
+  function displayCuteMessage() {
+    
+    const cuteMessageElement = document.getElementById('cuteMessage');
+
+   
+    const currentMessage = cuteMessages[currentIndex];
+
+   
+    cuteMessageElement.textContent = currentMessage;
+
+   
+    currentIndex = (currentIndex + 1) % cuteMessages.length;
+  }
+    
+    displayCuteMessage();
+
+    
+    setInterval(displayCuteMessage, 3000);
+  </script>
+
+  <br>
+
 
 
   <div class="large-image-container">
