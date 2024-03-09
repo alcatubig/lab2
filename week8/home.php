@@ -1,3 +1,13 @@
+<?php
+$file = 'visitor_count.txt';
+
+$current_count = file_get_contents($file);
+
+$current_count++;
+
+file_put_contents($file, $current_count);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +47,6 @@
       height: auto;
     }
 
-   
-
     .topnav a:hover {
       background-color: #ffd1dc;
     }
@@ -53,7 +61,6 @@
     }
 
     .grid-container {
-      
       grid-template-columns: auto auto auto;
       gap: 20px;
       background-color: #bad5ec;
@@ -64,7 +71,6 @@
     }
 
     .grid-item {
-      
       text-align: center;
       padding-bottom: 0;
       font-size: auto;
@@ -73,7 +79,6 @@
       position: sticky;
       overflow: hidden;
       border-radius: 20px;
-      
     }
 
     .grid-item video {
@@ -88,9 +93,16 @@
       background-color: #d1e5f4;
       padding: 10px;
       display: flex;
-  justify-content: space-between;
-  align-items: center;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 25px;
+  padding-right: 25px;
     }
+
+   p {
+    font-size: 17px;
+   }
+
   </style>
 </head>
 <body>
@@ -117,10 +129,10 @@
   </div>
 
   <div class="footer">
-    <p>josh hutcherson'd</p>
+    <p style="font-family: superc;"><?php echo "TOTAL VISITS: " . file_get_contents("visitor_count.txt"); ?></p>
     <div class="digital-clock" id="digital-clock">  </div> 
-  </div>
-  
+</div>
+
   <script src="jav.js"></script>
 
 </body>

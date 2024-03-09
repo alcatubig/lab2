@@ -146,6 +146,8 @@
       display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
     }
 
     .starline {
@@ -419,7 +421,7 @@
   
   <script src="jav.js"></script>
   <script>
-    // JavaScript functions to handle the pop-up
+    
     function openPopup1() {
       document.getElementById("popup1").style.display = "flex";
     }
