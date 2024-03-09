@@ -1,14 +1,23 @@
+<?php
+$file = 'visitor_count.txt';
+
+$current_count = file_get_contents($file);
+
+$current_count++;
+
+file_put_contents($file, $current_count);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> ABOUT ME </title>
+  <title>WELCOME</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <style>
 
-   
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -17,12 +26,12 @@
 
     .topnav {
       overflow: hidden;
-      background-color: #f2d29f;
-      text-align: center;
+      background-color: #9abddc;
+      text-align: center; 
       position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     .topnav a {
@@ -32,73 +41,68 @@
       text-decoration: none;
       border-radius: 10%;
     }
+
     .topnav a img {
       width: 70px; 
       height: auto;
     }
 
-   
-
     .topnav a:hover {
-      background-color: #f8f4b8;
+      background-color: #ffd1dc;
     }
 
     .content {
-      background-color: #fff4d6;
+      background-color: #d1e5f4;
       padding: 20px;
       text-align: center;
       font-family: superc;
       font-size:20px;
-      color: #b27e69;
+      color:#749dc1;
     }
 
     .grid-container {
-      display: grid;
       grid-template-columns: auto auto auto;
       gap: 20px;
-      background-color: #fae1bb;
+      background-color: #bad5ec;
       padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .grid-item {
-      background-color: rgba(255, 255, 255, 0.8);
       text-align: center;
-      padding: 0 auto;
-      font-size: 30px;
-      height: 400px; 
-      margin: 30px; 
+      padding-bottom: 0;
+      font-size: auto;
+      height: 100%; 
+      margin-bottom: 0;
+      position: sticky;
+      overflow: hidden;
+      border-radius: 20px;
     }
 
-    .grid-item img {
+    .grid-item video {
       max-width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover; 
+      border: 10px solid #ffcad3; 
+      border-radius: 15px; 
     }
 
     .footer {
-      background-color: #fff4d6;
-      
+      background-color: #d1e5f4;
+      padding: 10px;
       display: flex;
-  justify-content: space-between;
-  align-items: center;
-<<<<<<< HEAD
-  padding: 25px;
-=======
-  padding: 20px;
->>>>>>> 608db44f941a7c93412fe4c5cee8d746858ddb3b
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 25px;
+  padding-right: 25px;
     }
 
-    #linkedin,
-    #github {
-      color: #925e49;
-      text-decoration: none; 
-    }
+   p {
+    font-size: 17px;
+   }
 
-    
-    #linkedin:hover,
-    #github:hover {
-      color: #f2d29f;
-    }
   </style>
 </head>
 <body>
@@ -112,87 +116,24 @@
   </div>
 
   <div class="content">
-    <h1> ABOUT THE CREATOR </h1>
-    <p>Connect with me on <a href="#" id="linkedin">LinkedIn</a> and <a href="#" id="github">GitHub</a>!</p>
+    <h1> WELCOME </h1>
   </div>
 
   <div class="grid-container">
-    <div class="grid-item"><img src="images/hiyori1.jpg" alt="HIYORI"></div>
-    <div class="grid-item"><img src="images/hiyori2.jpg" alt="HIYORI"></div>
-    <div class="grid-item"><img src="images/hiyori3.jpg" alt="HIYORI"></div>
+    <div class="grid-item">
+      <video controls autoplay>
+        <source src="vids/josh.mp4" type="video/mp4">
+      </video>
+    </div>
+
   </div>
 
   <div class="footer">
-    <footer id="footer">WORK IN PROGRESS SORRY</footer>
+    <p style="font-family: superc;"><?php echo "TOTAL VISITS: " . file_get_contents("visitor_count.txt"); ?></p>
     <div class="digital-clock" id="digital-clock">  </div> 
-  </div>
-  
+</div>
+
   <script src="jav.js"></script>
-  <script>
-    class FooterText {
-      constructor(statements) {
-        this.statements = statements;
-        this.footer = document.getElementById('footer');
-        this.interval = null;
-      }
-    
-      startUpdating() {
-        this.updateText();
-        this.interval = setInterval(() => {
-          this.updateText();
-        }, 4300);
-      }
-    
-      stopUpdating() {
-        clearInterval(this.interval);
-      }
-    
-      updateText() {
-        const randomIndex = Math.floor(Math.random() * this.statements.length);
-        const randomStatement = this.statements[randomIndex];
-        this.footer.textContent = randomStatement;
-      }
-    }
-    
-    const statements = [
-  "Imagine being loved by me",
-  "I hear you tell me lightly, You were quite a mess, But I worship you no less this way",
-  "But I swear I thought I dreamed her, she never asked me once about the wrong I did",
-  "Girl I've never loved one like you",
-  "Home is wherever I'm with you",
-  "In the dead of night, I want to live with you",
-  "My attachment to you, Isn’t subject to change",
-  "You still would've been mine, We would have been timeless",
-  "And when we're apart, and I'm missing you, I close my eyes and all I see is you",
-  "I don't wanna think of anything else now that I thought of you"
-];
 
-
-    
-    const footerText = new FooterText(statements);
-    footerText.startUpdating();
-    </script>
-     <script type="module">
-<<<<<<< HEAD
-      
-=======
-      // Function to open LinkedIn profile
->>>>>>> 608db44f941a7c93412fe4c5cee8d746858ddb3b
-      import { openLinkedInProfile, openGitHubProfile } from './socialLinks.js';
-      
-      document.getElementById('linkedin').addEventListener('click', function() {
-        openLinkedInProfile();
-      });
-  
-<<<<<<< HEAD
-      
-=======
-      // Function to open GitHub profile
->>>>>>> 608db44f941a7c93412fe4c5cee8d746858ddb3b
-      document.getElementById('github').addEventListener('click', function() {
-        openGitHubProfile();
-      });
-    </script>
-     
 </body>
 </html>
