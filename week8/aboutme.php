@@ -7,12 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <style>
-
-   
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       padding-top: 93px;
+      background-color:  #fae1bb; 
     }
 
     .topnav {
@@ -20,9 +19,9 @@
       background-color: #f2d29f;
       text-align: center;
       position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     .topnav a {
@@ -36,8 +35,6 @@
       width: 70px; 
       height: auto;
     }
-
-   
 
     .topnav a:hover {
       background-color: #f8f4b8;
@@ -58,6 +55,7 @@
       gap: 20px;
       background-color: #fae1bb;
       padding: 50px;
+      
     }
 
     .grid-item {
@@ -67,22 +65,25 @@
       font-size: 30px;
       height: 400px; 
       margin: 30px; 
+      border-radius: 20px;
+      
     }
 
     .grid-item img {
       max-width: 100%;
       height: 100%;
       object-fit: cover; 
+      border-radius: 20px;
     }
 
     .footer {
       background-color: #fff4d6;
       padding: 25px;
       display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 25px;
-  padding-right: 25px;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 25px;
+      padding-right: 25px;
     }
 
     #linkedin,
@@ -91,10 +92,32 @@
       text-decoration: none; 
     }
 
-    
     #linkedin:hover,
     #github:hover {
       color: #f2d29f;
+    }
+
+    
+    .view-album {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    
+    .view-album a {
+      text-decoration: none;
+      color: #925e49;
+      font-size: 20px;
+      font-family: superc;
+      margin-bottom: 10px;
+    }
+
+    .view-album a:hover {
+      text-decoration: none;
+      color: #b27e69;
+      font-size: 20px;
+      font-family: superc;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -117,6 +140,11 @@
     <div class="grid-item"><img src="images/hiyori1.jpg" alt="HIYORI"></div>
     <div class="grid-item"><img src="images/hiyori2.jpg" alt="HIYORI"></div>
     <div class="grid-item"><img src="images/hiyori3.jpg" alt="HIYORI"></div>
+  </div>
+
+ 
+  <div class="view-album">
+    <a href="album.php">View Album</a>
   </div>
 
   <div class="footer">
@@ -170,14 +198,14 @@
     footerText.startUpdating();
     </script>
      <script type="module">
-      // Function to open LinkedIn profile
+      
       import { openLinkedInProfile, openGitHubProfile } from './socialLinks.js';
       
       document.getElementById('linkedin').addEventListener('click', function() {
         openLinkedInProfile();
       });
   
-      // Function to open GitHub profile
+     
       document.getElementById('github').addEventListener('click', function() {
         openGitHubProfile();
       });
