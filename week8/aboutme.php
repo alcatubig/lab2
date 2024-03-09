@@ -81,6 +81,19 @@
       display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+    }
+
+    #linkedin,
+    #github {
+      color: #925e49;
+      text-decoration: none; 
+    }
+
+    
+    #linkedin:hover,
+    #github:hover {
+      color: #f2d29f;
     }
   </style>
 </head>
@@ -96,6 +109,7 @@
 
   <div class="content">
     <h1> ABOUT THE CREATOR </h1>
+    <p>Connect with me on <a href="#" id="linkedin">LinkedIn</a> and <a href="#" id="github">GitHub</a>!</p>
   </div>
 
   <div class="grid-container">
@@ -105,11 +119,68 @@
   </div>
 
   <div class="footer">
-    <p>WORK IN PROGRESS SORRYYY</p>
+    <footer id="footer">WORK IN PROGRESS SORRY</footer>
     <div class="digital-clock" id="digital-clock">  </div> 
   </div>
   
   <script src="jav.js"></script>
+  <script>
+    class FooterText {
+      constructor(statements) {
+        this.statements = statements;
+        this.footer = document.getElementById('footer');
+        this.interval = null;
+      }
+    
+      startUpdating() {
+        this.updateText();
+        this.interval = setInterval(() => {
+          this.updateText();
+        }, 4300);
+      }
+    
+      stopUpdating() {
+        clearInterval(this.interval);
+      }
+    
+      updateText() {
+        const randomIndex = Math.floor(Math.random() * this.statements.length);
+        const randomStatement = this.statements[randomIndex];
+        this.footer.textContent = randomStatement;
+      }
+    }
+    
+    const statements = [
+  "Imagine being loved by me",
+  "I hear you tell me lightly, You were quite a mess, But I worship you no less this way",
+  "But I swear I thought I dreamed her, she never asked me once about the wrong I did",
+  "Girl I've never loved one like you",
+  "Home is wherever I'm with you",
+  "In the dead of night, I want to live with you",
+  "My attachment to you, Isn’t subject to change",
+  "You still would've been mine, We would have been timeless",
+  "And when we're apart, and I'm missing you, I close my eyes and all I see is you",
+  "I don't wanna think of anything else now that I thought of you"
+];
 
+
+    
+    const footerText = new FooterText(statements);
+    footerText.startUpdating();
+    </script>
+     <script type="module">
+      // Function to open LinkedIn profile
+      import { openLinkedInProfile, openGitHubProfile } from './socialLinks.js';
+      
+      document.getElementById('linkedin').addEventListener('click', function() {
+        openLinkedInProfile();
+      });
+  
+      // Function to open GitHub profile
+      document.getElementById('github').addEventListener('click', function() {
+        openGitHubProfile();
+      });
+    </script>
+     
 </body>
 </html>
