@@ -81,7 +81,11 @@
       display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   padding: 25px;
+=======
+  padding: 20px;
+>>>>>>> 608db44f941a7c93412fe4c5cee8d746858ddb3b
     }
 
     #linkedin,
@@ -169,14 +173,22 @@
     footerText.startUpdating();
     </script>
      <script type="module">
+<<<<<<< HEAD
       
+=======
+      // Function to open LinkedIn profile
+>>>>>>> 608db44f941a7c93412fe4c5cee8d746858ddb3b
       import { openLinkedInProfile, openGitHubProfile } from './socialLinks.js';
       
       document.getElementById('linkedin').addEventListener('click', function() {
         openLinkedInProfile();
       });
   
+<<<<<<< HEAD
       
+=======
+      // Function to open GitHub profile
+>>>>>>> 608db44f941a7c93412fe4c5cee8d746858ddb3b
       document.getElementById('github').addEventListener('click', function() {
         openGitHubProfile();
       });
